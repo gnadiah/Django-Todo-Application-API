@@ -2,11 +2,11 @@
 
 ## Project Plan
 
-- [x] Create a Todo Application API with default django framework
-- [ ] Create a Todo Application API with restful django framework
-- [ ] Add authentication for Todo Application API
-- [ ] Create SSO login for Todo Application API
-- [ ] Multiple user in one Todo Template
+- [x] Create a Todo Application API with default django framework (API v1.0)
+- [ ] Create a Todo Application API with restful django framework (API v2.0)
+- [ ] Add authentication for Todo Application API (API v2.1)
+- [ ] Create SSO login for Todo Application API (API v2.2)
+- [ ] Multiple user in one Todo Template (API v3.0)
 
 ## Requirements
 
