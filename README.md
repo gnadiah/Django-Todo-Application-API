@@ -34,12 +34,16 @@
 echo SECRET_KEY=SUPER-ULTIMATE-SECRET-KEY > .env
 ```
 
+---
+
 ### Package Setup
 
 ```bash
 sudo apt install python3-pip
 sudo pip3 install virtualenv
 ```
+
+---
 
 ### Environment Setup
 
@@ -60,6 +64,8 @@ source venv/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
+
+---
 
 ### Database Setup
 
@@ -200,6 +206,8 @@ python manage.py runserver 3000
         }
 }
 ```
+
+---
 
 #### Delete task
 
