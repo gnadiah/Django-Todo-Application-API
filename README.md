@@ -28,8 +28,10 @@
 
 - Create SECRET_KEY variable in .env file or use this command
 
+`echo SECRET_KEY=<your-secret-key> > .env`
+
 ```bash
-echo SECRET_KEY=<your-secret-key> > .env
+echo SECRET_KEY=SUPER-ULTIMATE-SECRET-KEY > .env
 ```
 
 ### Package Setup
@@ -83,9 +85,7 @@ python manage.py runserver
 
 - Run server at specified port (port: 8000, 5000, 3000, ...)
 
-```bash
-python manage.py runserver <YOUR-PORT>
-```
+`python manage.py runserver <YOUR-PORT>`
 
 ```bash
 python manage.py runserver 8000
