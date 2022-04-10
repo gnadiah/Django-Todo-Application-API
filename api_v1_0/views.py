@@ -144,7 +144,7 @@ def edit_task(request, task_id):
                 "message": "Internal server error",
             }, status=500)
         return JsonResponse({
-            "message": "Task updated successfully",
+            "message": "Task edited successfully",
             "task": {
                 "id": task.task_id,
                 "title": task.title,

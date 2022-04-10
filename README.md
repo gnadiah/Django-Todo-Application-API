@@ -99,6 +99,122 @@ python manage.py runserver 5000
 python manage.py runserver 3000
 ```
 
+## API Documentation
+
+`If you use API without version, default API will be latest version`
+
+### Latest API Documentation (v1.0)
+
+#### Get all task
+
+- API endpoint: `/api/v1.0/getTask/`
+- Description: Get all task
+- Method: `GET`
+- Request Data: `None`
+- Response data:
+
+```json
+{
+    "message": "Task got successfully",
+    "task": 
+        [
+            {
+                "id": "<TASK-ID>",
+                "title": "<TASK-TITLE>",
+                "content": "<TASK-CONTENT>",
+                "created_at": "<TASK-CREATED-AT>",
+                "updated_at": "<TASK-UPDATED-AT>"
+            },
+            {
+                "id": "<TASK-ID>",
+                "title": "<TASK-TITLE>",
+                "content": "<TASK-CONTENT>",
+                "created_at": "<TASK-CREATED-AT>",
+                "updated_at": "<TASK-UPDATED-AT>"
+            },
+            ...
+        ]
+}
+```
+
+---
+
+#### Create new task
+
+- API endpoint: `/api/v1.0/createTask/`
+- Description: Create a new task
+- Method: `POST`
+- Request Data:
+
+```json
+{
+    "title": "<TASK-TITLE>",
+    "content": "<TASK-CONTENT>"
+}
+```
+
+- Response data:
+
+```json
+{
+    "message": "Task created successfully",
+    "task": 
+        {
+            "id": "<TASK-ID>",
+            "title": "<TASK-TITLE>",
+            "content": "<TASK-CONTENT>",
+            "created_at": "<TASK-CREATED-AT>",
+            "updated_at": "<TASK-UPDATED-AT>"
+        }
+}
+```
+
+---
+
+#### Edit task
+
+- API endpoint: `/api/v1.0/editTask/<TASK-ID>/`
+- Description: Edit task
+- Method: `PATCH`
+- Request Data:
+
+```json
+{
+    "title": "<TASK-TITLE>", // If you want to change title, field it
+    "content": "<TASK-CONTENT>" // If you want to change content, field it
+}
+```
+
+- Response data:
+
+```json
+{
+    "message": "Task edited successfully",
+    "task": 
+        {
+            "id": "<TASK-ID>",
+            "title": "<NEW-TASK-TITLE>",
+            "content": "<NEW-TASK-CONTENT>",
+            "created_at": "<TASK-CREATED-AT>",
+            "updated_at": "<TASK-UPDATED-AT>"
+        }
+}
+```
+
+#### Delete task
+
+- API endpoint: `/api/v1.0/deleteTask/<TASK-ID>/`
+- Description: Edit task
+- Method: `PATCH`
+- Request Data: `None`
+- Response data:
+
+```json
+{
+    "message": "Task deleted successfully"
+}
+```
+
 ## API Creator
 
 ### Nguyen Hai Dang (ndangmods)
