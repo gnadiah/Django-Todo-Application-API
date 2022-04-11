@@ -116,7 +116,7 @@ python manage.py runserver 3000
 - API endpoint: `/api/v1.0/getTask/`
 - Description: Get all task
 - Method: `GET`
-- Request Data: `None`
+- Request data: `None`
 - Response data:
 
 ```json
@@ -140,6 +140,30 @@ python manage.py runserver 3000
             },
             ...
         ]
+}
+```
+
+---
+
+#### Get specific task
+
+- API endpoint: `/api/v1.0/getSpecificTask/<TASK-ID>`
+- Description: Get specific task
+- Method: `GET`
+- Request data: `None`
+- Response data:
+
+```json
+{
+    "message": "Task got successfully",
+    "task":
+        {
+            "id": "<TASK-ID>",
+            "title": "<TASK-TITLE>",
+            "content": "<TASK-CONTENT>",
+            "created_at": "<TASK-CREATED-AT>",
+            "updated_at": "<TASK-UPDATED-AT>"
+        }
 }
 ```
 
@@ -182,7 +206,7 @@ python manage.py runserver 3000
 - API endpoint: `/api/v1.0/editTask/<TASK-ID>/`
 - Description: Edit task
 - Method: `PATCH`
-- Request Data:
+- Request data:
 
 ```json
 {
@@ -214,7 +238,7 @@ python manage.py runserver 3000
 - API endpoint: `/api/v1.0/deleteTask/<TASK-ID>/`
 - Description: Edit task
 - Method: `PATCH`
-- Request Data: `None`
+- Request data: `None`
 - Response data:
 
 ```json

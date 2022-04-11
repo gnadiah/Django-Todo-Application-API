@@ -18,6 +18,11 @@ def index(request):
             'description': 'Get all tasks.'
         },
         {
+            'url': '/api/v1.0/getSpecificTask/',
+            'method': 'GET',
+            'description': 'Get a specific task.'
+        },
+        {
             'url': '/api/v1.0/createTask/',
             'method': 'POST',
             'description': 'Create a new task.'
@@ -71,6 +76,36 @@ def get_task(request):
             return JsonResponse({
                 "message": "No task found",
             }, status=404)
+
+
+@csrf_exempt
+def get_specific_task(request, task_id):
+    if request.method != 'GET':
+        return JsonResponse({
+            "message": "Method not allowed",
+        }, status=405)
+    else:
+        try:
+            task = Todo_v1_0.objects.get(task_id=task_id)
+        except Todo_v1_0.DoesNotExist:
+            return JsonResponse({
+                "message": "Task not found",
+            }, status=404)
+        except Exception as e:
+            print(e)
+            return JsonResponse({
+                "message": "Internal Server Error",
+            }, status=500)
+        return JsonResponse({
+            "message": "Task got successfully",
+            "task": {
+                "id": task.task_id,
+                "title": task.title,
+                "content": task.content,
+                "created_at": task.created_at,
+                "updated_at": task.updated_at,
+            }
+        }, status=200)
 
 
 @csrf_exempt
