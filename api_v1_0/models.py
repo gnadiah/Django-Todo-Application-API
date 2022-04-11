@@ -1,8 +1,6 @@
 import uuid
 from django.db import models
 
-# Create your models here.
-
 
 class Todo_v1_0(models.Model):
     id = models.IntegerField(primary_key=True)

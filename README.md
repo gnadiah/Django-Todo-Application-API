@@ -75,6 +75,14 @@ pip install -r requirements.txt
 python manage.py makemigrations
 ```
 
+- Choose app database to make makemigrations
+
+`python manage.py makemigrations <app-name>`
+
+```bash
+python manage.py makemigrations api_v1_0
+```
+
 - Migrate database
 
 ```bash
