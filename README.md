@@ -77,7 +77,7 @@ python manage.py makemigrations
 
 - Choose app database to make makemigrations
 
-`python manage.py makemigrations <app-name>`
+`python manage.py makemigrations <API-VERSION>`
 
 ```bash
 python manage.py makemigrations api_v1_0
