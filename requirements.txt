@@ -1,2 +1,4 @@
 python-dotenv
 django
+django-cors-headers
+djangorestframework
